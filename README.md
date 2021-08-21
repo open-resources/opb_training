@@ -1,1 +1,1 @@
-# prairielearn_guide
+# Guide to Prairie Learn (for students)
