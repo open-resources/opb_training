@@ -1,3 +1,4 @@
+(latex)=
 # Using LaTeX in problems
 
 ## What is LaTeX?

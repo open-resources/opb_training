@@ -1,3 +1,4 @@
+(prairielearn)=
 # Prairie Learn System workflow
 
 The markdown files that are created to author questions are then parsed by a function in [problem_bank_scripts](https://github.com/open-resources/problem_bank_scripts). The function creates the correct format in which the question should be uploaded to PrairieLearn to be able to correctly be randomised and displayed.

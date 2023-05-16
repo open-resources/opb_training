@@ -1,8 +1,8 @@
+(prairielearn_docker)=
 # PrairieLearn Course Development on Docker
 
 This page describes the procedure to install and run your course locally within Docker.
 The steps listed below **only need to be done once**, once you've got things setup correctly, you should refer to the [Question Development](../dev/authoring_questions) page for subsequent questions.
-
 
 ## Step 1: Ensure Docker is installed on your machine
 

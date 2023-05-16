@@ -1,3 +1,4 @@
+(authoring_questions)=
 # Authoring Markdown questions in PrairieLearn
 
 Welcome to the Open Problem Bank (OPB) in Physics.

@@ -1,3 +1,4 @@
+(alt-text)=
 # Guide to Writing Alt-Text 
 
 Alt-text for images are used to describe the content or the functionality within the image without giving away answers or extra clues to the problem.
