@@ -70,6 +70,45 @@ You will need the following server information:
 - Server URL: https://moosvilab.ok.ubc.ca
 - Server Display Name: `MoosviLab`
 
+### Tour of Mattermost
+
+```{dropdown} Channels in Mattermost
+    :class-container: sd-shadow-lg
+    :color: primary
+    :open:
+
+<div class="container youtube">
+<iframe class="responsive-iframe" src="https://www.youtube-nocookie.com/embed/zC3XRzeMMPs" frameborder="0" allow="accelerometer; autoplay="0"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+```
+
+```{dropdown} Mattermost Mobile
+    :class-container: sd-shadow-lg
+    :color: primary
+    :open:
+
+<div class="container youtube">
+<iframe class="responsive-iframe" src="https://www.youtube-nocookie.com/embed/YPFfXISvydk" frameborder="0" allow="accelerometer; autoplay="0"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+```
+
+### Threads in Mattermost
+
+In **most cases** you should be using Threads whenever you're replying to a message, that helps keep things organized.
+When you want to start a new conversation, you can post a new message in the appropriate channel (avoid duplicate posting), and the expectation is others will respond to your message in threads.
+Don't worry about posting too much or bothering others - this tool is only being used by our team!
+
+<img src="setup_images/mattermost_threads.png" alt = "Use the 'reply' feature to respond to threads."/>
+
+### Your bio
+
+Once you've gotten the hang of Mattermost by watching the videos above, you're ready to send your first message!
+In the `oer-introductions` channel, upload a reasonably professional picture of yourself and a short (150-200 words) bio/paragraph that you are comfortable sharing publicly.
+You can see the previous examples of former students there.
+This will go up on the [project website here](https://firas.moosvi.com/oer/physics_bank/files/bio.html).
+In addition to the bio, feel free to also say hi and chat with the other project team members on Mattermost!
+
+
 (github.com_w)=
 ## GitHub.com account
 
@@ -299,13 +338,13 @@ Let's install the key packages needed (you will note that we're also specifying 
 You should copy and paste each line below in your Terminal to install the following packages:
 
 ```
-conda install -c conda-forge "jupyterlab"
-conda install -c conda-forge "numpy"
-conda install -c conda-forge "pandas"
-conda install -c conda-forge "black"
-conda install -c conda-forge "nbconvert"
-conda install -c conda-forge "seaborn"
-conda install -c conda-forge "pre-commit"
+conda install -c conda-forge black
+conda install -c conda-forge nbconvert
+conda install -c conda-forge seaborn
+conda install -c conda-forge pandas
+conda install -c conda-forge numpy
+conda install -c conda-forge jupyterlab
+conda install -c conda-forge pre-commit
 ```
 
 `conda` will show you the packages that will be downloaded, and you may need to press `enter` or `Y` (for yes) to proceed with the installation.
