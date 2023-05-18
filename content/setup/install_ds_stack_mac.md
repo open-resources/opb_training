@@ -4,12 +4,7 @@ macOS Software Stack
 
 <!-- <!-- <head>
 	<base target="_blank">
-</head> --> -->
-
-These instructions will walk you through installing the required Data Science software stack for this project. 
-Before starting, ensure that your laptop meets the minimum requirements listed [here](https://docs.docker.com/desktop/install/mac-install/).
-
-If your computer does not meet any of the requirements above, let me know first and we can discuss alternate possibilities so you can still participate.
+</head> -->
 
 ```{tip}
 Before starting, I suggest updating your Mac to the latest version your laptop can run:
@@ -17,10 +12,15 @@ Before starting, I suggest updating your Mac to the latest version your laptop c
 <img src="setup_images/updatemacOS.gif">
 ```
 
+These instructions will walk you through installing the required Data Science software stack for this project. 
+Before starting, ensure that your laptop meets the minimum requirements listed [here](https://docs.docker.com/desktop/install/mac-install/).
+
+If your computer does not meet any of the requirements above, let me know first and we can discuss alternate possibilities so you can still participate.
+
 ## Installation notes
 
-If you have already installed Git, Latex, or any of the Python related packages please uninstall these and follow the instructions below to install and configure them correctly (make sure to also remove any user configuration files and backup them if desired).
-In order to be able to support you effectively and minimize setup issues and software conflicts, we require all students to install the software stack the same way.
+Unless you really know what you are doing, if you have already installed Git, Conda, or any of the Python related packages below, I **strongly** advise you to please uninstall these and follow the instructions below to re-install and configure them correctly (make sure to also remove any user configuration files and backup them if desired).
+In order to be able to support you effectively and minimize setup issues and software conflicts, we suggest students to install the software stack the same way (even though there are better ways).
 
 In all the sections below, if you are presented with the choice to download either a 64-bit (also called x64) or a 32-bit (also called x86) version of the application **always** choose the 64-bit version.
 
@@ -34,10 +34,12 @@ Once you have completed these installation instructions, make sure to follow the
 - [Terminal](terminal)
 - [Command Line Tools](command-line-tools)
 - [Python](python)
+- [R](R)
 - [Visual Studio Code](visual_studio_code)
-- [Tree](tree)
 - [Git and GitHub](git_github)
+- [Tree](tree)
 - [Test JupyterLab](test_jupyterlab)
+- [Docker](docker)
 
 (zoom)=
 ## Zoom
@@ -51,7 +53,8 @@ You can ensure you have the latest version of Zoom by clicking "Check for Update
 <img src="setup_images/zoom.png" alt = "Zoom 'Check for Updates' showing the latest version of Zoom is installed."/>
 
 ```{important}
-Please note that if you have been relying on the "web version" of Zoom that works only in a browser, this will not work for this course! Please make sure to download the Zoom desktop client for your operating system to fully participate in the course.
+Please note that if you have been relying on the "web version" of Zoom that works only in a browser, this will not work for this project!
+Please make sure to download the Zoom desktop client for your operating system to fully participate in the course.
 ```
 
 (mattermost)=
@@ -117,7 +120,7 @@ Your GitHub username is important, here's how to find your username:
 (terminal)=
 ## Terminal
 
-The **command line** is the text interface to the computer that accepts commands that the computer will execute.
+The **command line** (also known as the Terminal) is the text interface to the computer that accepts commands that the computer will execute.
 These commands include:
 
 - starting programs
@@ -139,7 +142,10 @@ echo $0
 ```
 
 If you are running a `bash` shell, you will see the output as `bash`.
-If you are running a `zsh` shell, you will see the output as `-zsh`. 
+If you are running a `zsh` shell, you will see the output as `-zsh`.
+
+### Change your default shell to `zsh` (if necessary)
+
 To make sure your shell is set to zsh, run this command:
 
 ```
@@ -150,10 +156,23 @@ Enter the password, quit the terminal (`File-->Quit` or `Command+Q`), and open i
 
 You should now proceed to do some more configuration via the Terminal.
 
+### Install Ohmyzsh to get Terminal colours, and highlighting
+
+Install `Ohmyzsh` to add Terminal colours, highlighting and other cool features.
+
+Oh My Zsh is installed by running the following command in your Terminal: 
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+You may now customize your Terminal with themes (see [screenshots of themes here](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)) by [following the directions here](https://github.com/ohmyzsh/ohmyzsh#selecting-a-theme).
+Selecting a theme is optional, the default one is pretty good as it is!
+
 (command-line-tools)=
 ## Install Command-line Tools
 
-Now we are ready to install some command-line tools.
+Now we are ready to install some command-line tools via the Terminal.
 Open a Terminal and type the following command to install Xcode command line tools:
 
 ```
@@ -166,18 +185,23 @@ Please **ask for help** if you run into any issues!
 You're welcome to try and troubleshoot it yourself, but if you get stuck for too long, reach out to me and I can probably help you fix it fairly quickly.
 Common issues include: not enough disk space, not having the latest version of your operating system installed, network issues, corrupted download, etc...
 ```
+
+This is a fairly large download and make take a few minutes to install.
+You may also need to restart your machine.
+
 (python)=
 ## Python
 
-We will be using Python for a large part of the course, and `conda` will be our Python package manager.
-We will be using the [Miniconda installer (read more here)](https://docs.conda.io/en/latest/miniconda.html) to install both python and conda at the same time.
-Miniconda also provides us with a minimum number of useful packages so installation is quick, and relatively painless.
+We will be using Python for a large part of this project, and `conda` will be our main Python package manager.
+We will be using the [Miniconda installer (read more here)](https://docs.conda.io/en/latest/miniconda.html) to install python.
+The Miniconda installer also provides us with a minimum number of useful packages so installation is quick, and relatively painless.
 
-### Installing `conda` and python
+### Installing python
 
 The latest Miniconda installer can be downloaded from here: [Miniconda macOSX 64-bit pkg install](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.pkg).
 
-After installation, restart the terminal. If the installation was successful, you will see `(base)` prepending to your prompt string. To confirm that `conda` is working, you can ask it which version was installed:
+After installation, restart the terminal. If the installation was successful, you will see `(base)` prepending to your prompt string.
+To confirm that `conda` is working, you can ask it which version was installed:
 ```
 conda --version
 ```
@@ -244,6 +268,149 @@ pip install problem_bank_scripts --upgrade
 pip install problem_bank_helpers --upgrade
 ```
 
+(R)=
+## R, IRkernel, and RStudio
+
+R is another programming language that we will be using a lot in this project, particularly for the Data Science and Statistics problem banks.
+We will use R both in Jupyter notebooks and in RStudio.
+
+### Installing R
+
+To download the latest version of R, [visit this website](https://cran.r-project.org/bin/macosx/) and select the Apple Silicon for a newer Mac with an M1/M2 chip, or the Intel chip version
+Open the file and follow the installer instructions accepting the default configuration.
+
+<!-- After the installation is complete, we will add the R executables to the PATH variable in terminal so that you can use it without typing the full path to R each time. Open a terminal and type:
+
+```
+code ~/.bash_profile
+```
+
+Append the following line to the file
+
+```
+# Add R and Rscript to PATH
+export PATH="/c/Program Files/R/R-4.0.2/bin/x64":$PATH
+```
+
+Then save the file and exit VS Code. -->
+Once it's installed, you can open a Terminal and type,
+
+```
+R --version
+```
+
+and that should return something like:
+
+```
+R version 4.2.3 (2023-03-15) -- "Shortstop Beagle"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin22.3.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under the terms of the
+GNU General Public License versions 2 or 3.
+For more information about these matters see
+https://www.gnu.org/licenses/.
+```
+
+> Note: Although it is possible to install R through Anaconda, we highly recommend not doing so. In case you have already installed R using Anaconda you can remove it by executing `conda uninstall r-base`.
+
+### RStudio
+
+[Download the macOS version of RStudio](https://posit.co/download/rstudio-desktop/).
+Open the file and follow the installer instructions.
+
+To see if you were successful, try opening RStudio by clicking on its icon. It should open and looks something like this picture below:
+
+<img src="setup_images/RStudio.png" alt = ""/>
+
+<!-- Next, we will make sure that Rstudio uses the same directories as R from terminal for its configuration. To do this, we will need to set an environmental variable in Windows. First, open the start menu, type "env" and select the match that reads "Edit the system environment variables". Click the button at the bottom that reads "Environmental Variables...":
+
+<img src="../images/sys-props-env-vars.png" alt = ""/>
+
+Under "User variable" click the "New..." button:
+
+<img src="../images/env-vars-new-user-var.png" alt = ""/>
+
+And type in `R_USER` as the "Variable name" and `C:\Users\username` as the "Variable value", replacing `username` with your actual user name (if you don't know your user name, look at the top of the screenshot above where it says "User variables for your_username"):
+
+<img src="../images/new-user-var-values.png" alt = ""/>
+
+Click "OK" on all of the three windows we opened above and you're done! If you open RStudio and R from terminal and type
+
+```
+.libPaths()
+```
+
+both should return the same values, e.g.
+
+```
+"C:/Users/joelo/R/win-library/4.0"   "C:/Program Files/R/R-4.0.2/library"
+```
+
+### Rtools
+
+Windows users will also need to install Rtools, which will allow you to use external libraries. Go to <http://cran.r-project.org/bin/windows/Rtools/> and download the latest version (e.g., Rtools40.exe). After the download has finished, run the installer with the default configuration. Do *not* follow the Rtools' website instructions for "Putting Rtools on the PATH". RStudio will put Rtools on the PATH automatically when it is needed.
+
+To test if you're installation was successful, open RStudio and type the following into the Console:
+
+```
+install.packages("jsonlite", type = "source")
+```
+
+If the `jsonlite` package installs without errors, Rtools is setup correctly. -->
+
+### Essential R packages
+
+Next, install the key R packages needed for the start of MDS program,
+by opening up RStudio and
+typing the following into the R console inside RStudio:
+
+```
+install.packages(c('tidyverse', 'blogdown', 'xaringan', 'renv', 'devtools', 'usethis'))
+```
+
+If you get a prompt asking if you want to install packages that need compilation from sources, click "Yes".
+
+> Note: we will use many more packages than those listed above across the MDS program, however we will manage these using the `renv` package manager (which you will learn about in DSCI 521: Platforms for Data Science).
+
+### IRkernel
+
+The `IRkernel` package is needed to make R work in Jupyter notebooks. To enable this kernel in the notebooks, open R *from a Terminal* and run the setup via the following two commands:
+
+```
+install.packages('IRkernel')
+IRkernel::installspec()
+```
+
+When asked to select a mirror, pick one at a location close to where you live for faster downloads.
+
+> Note that you cannot use RStudio for this step because it will not be able to find the jupyter installation. R from terminal will since the correct PATH for jupyter is set when the terminal is launched.
+
+To see if you were successful, try running JupyterLab and check if you have a working R kernel. To launch the JupyterLab type the following in the terminal:
+
+```
+jupyter lab
+```
+
+A browser should have launched and you should see a page that looks like the screenshot below. Now click on "R" notebook (circled in red on the screenshot below) to launch an JupyterLab with an R kernel.
+
+<img src="setup_images/jupyter_lab_r_kernel.png" alt = ""/>
+
+Sometimes a kernel loads, but doesn't work as expected. To test whether your installation was done correctly now type `library(tidyverse)` in the code cell and click on the run button to run the cell.
+If your R kernel works you should see something like the image below:
+
+<img src="setup_images/jupyter_lab_r_kernel2.png" alt = ""/>
+
+To improve the experience of using R in JupyterLab, we will add an extension that allows us to setup keyboard shortcuts for inserting text (thanks to former MDS student Ryan Homer for developing this extension!).
+By default, it creates shortcuts for inserting two of the most common R operators: `<-` and `%>%`.
+Run the following from terminal to install the extension:
+
+```
+jupyter labextension install @techrah/text-shortcuts
+jupyter lab build
+```
+
 (visual_studio_code)=
 ## Visual Studio Code
 
@@ -291,12 +458,20 @@ code --version
 you should see something like this if you were successful:
 
 ```
-1.71
-507ce72a4466fbb27b715c3722558bb15afa9f48
+1.78.2
+b3e4e68a0bc097f0ae7907b217c1119af9e03435
 arm64 (or x64)
 ```
 
-[Manual install instructions are here, but remember you're using the zsh now!](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) steps as well.
+````{tip}
+If the Shell command doesn't work for you, then you may try running this command in a Terminal to manually add VS Code to your path:
+```
+cat << EOF >> ~/.zprofile
+# Add Visual Studio Code (code)
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+EOF
+```
+````
 
 ### Setting VS Code as the default editor
 
@@ -307,7 +482,7 @@ code ~/.z_profile
 ```
 
 ```{note}
-If you see any existing lines in your `~/.z_profile` related to a previous Python or R installation, please remove these.
+If you see any existing lines in your `~/.z_profile` related to a previous Python installation, please remove these.
 ```
 
 Paste the following lines to the new file that opens up:
@@ -326,9 +501,9 @@ Then save the file and exit VS Code.
 (git_github)=
 ## Git and GitHub
 
-We will use the publicly available [GitHub.com](https://github.com/).
+We will use the publicly available [GitHub.com](https://github.com/) as our versioning system.
 
-You should already have your GitHub.com username, you will need that for this question.
+You should already have your GitHub.com username, you will need that for this section.
 
 ### Install Git on your computer
 
@@ -344,17 +519,17 @@ git --version
 you should see something like this (does not have to be the exact same version) if you were successful:
 
 ```
-git version 2.37.2
+git version 2.40.0
 ```
 
 ```{note}
-If you run into trouble, this is the time to post on {{ FORUM_LINK }} with your error message and ask for help!
+If you run into trouble, this is the time to post on Mattermost with your error message and ask for help!
 ```
 
 ### Configuring Git user info
 
 Next, we need to configure Git by telling it your name and email.
-To do this type the following into the Terminal (the same ones you used to sign up for GitHub):
+To do this type the following into the Terminal (the same ones you used to sign up for GitHub) and assign your name and email to the git configuration files:
 
 ```
 git config --global user.name "YOUR NAME HERE"
@@ -365,44 +540,23 @@ git config --global user.email YOUR@EMAIL.com
 To ensure that you haven't made a typo in any of the above, you can view your global Git configurations by either opening the configuration file in a text editor (e.g. via the command `code ~/.gitconfig`) or by typing `git config --list --global`.
 ```
 
-### Install Ohmyzsh to get Terminal colours, and highlighting
-
-Install `Ohmyzsh` to add Terminal colours, highlighting and other cool features.
-
-Oh My Zsh is installed by running the following command in your Terminal: 
-
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-You may now customize your Terminal with themes (see [screenshots of themes here](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)) by [following the directions here](https://github.com/ohmyzsh/ohmyzsh#selecting-a-theme).
-Selecting a theme is optional, the default one is pretty good as it is!
-
 ### Create your GitHub "Personal Access Token"
 
 This is a bit tricky, so please make sure you follow these directions carefully.
 
-1. Create a Personal Access Token on GitHub.com by clicking this link: https://github.com/settings/tokens/new; make sure to COPY the token that they give you, it is basically a special password that you can use in the Terminal. Detailed steps are:
+1. Create a **classic** Personal Access Token on GitHub.com by clicking this link: https://github.com/settings/tokens/new.
 
-- Log in to GitHub.com, 
-- Click your picture in the top right, 
-- Click Settings, 
-- Click Developer Settings
-- Click "Personal access tokens", set the appropriate permissions at the "repo" level (see image below):
+2. Add a short description (OPB project is probably fine).
 
+3. Check the "repo" box and the "workflow" and the "admin" boxes.
 
-```{figure} setup_images/repo.png
----
-name: PAT
----
-Personal Access Token settings
+4. Click "Generate Token" and make sure to COPY the token that they give you and save it somewhere secure (like a password manager), it is basically a special password that you can use in the Terminal. Save this token somewhere on your computer, you will need it when you clone a **private** repository to your computer.
+
+```{tip}
+Don't share your token with anyone and protect it like it's your password! 
+You will not be able to come back to this page to get your token.
+If you forget it, or lose it, you can just delete the token and create another one.
 ```
-
-<img src="setup_images/GitHubcreatePAT.gif">
-
-- Click "Generate new token"
-- Save this token somewhere on your computer, you will need it when you clone a **private** repository to your computer.
-- Don't share your token with anyone and protect it like it's your password! You will not be able to come back to this page to get your token. If you forget it, or lose it, you can just delete the token and create another one.
 
 ### Clone your first repository on your computer!
 
@@ -423,13 +577,14 @@ If after running the code above, you see the error message:
 It means that you already attempted a clone before, and there is already a directory called `test` where you are trying to clone this repository.
 You will first need to delete that directory to try again.
 
-Open an Explorer window on your computer, navigate to the directory, right click the `test` directory, and then delete the directory.
-Alternatively, from the command line you can try:
+Open a Finder window on your computer, navigate to the directory, right click the `test` directory, and then delete the directory.
+Alternatively, using the Terminal, you can remove the test directory:
 
 > rm -rf test
 
 which will "remove" the directory called "test". The "-" is to specify additional options: `r` means "recursively" for all the files in the directory, and `f` means "force" which means don't ask me for confirmation after deleting each file and folder.
 ```
+
 (tree)=
 ## Tree
 
@@ -458,14 +613,12 @@ You're all done!
 (docker)=
 ## Docker
 
-You will need to install Docker for this project.
+You will also need to install Docker for this project.
 It's free but you will need at least 25 GB of free space on your machine.
 
 - On macOS [download it here](https://docs.docker.com/desktop/install/mac-install/)
     - Make sure to download the correct version - if you have a M1 or M2 Mac, you want the Apple Silicon, otherwise older Macs will have an Intel Chip.
-- On Windows [download it here](https://docs.docker.com/desktop/install/windows-install/)
-    - There are some specific Windows version requirements, be sure to read the requirements carefully and ensure you meet either the WSL 2 backend or the Hyper-V backend
-- On Linux and [download it here](https://docs.docker.com/desktop/install/linux-install/).
+
 To confirm Docker is working, open a Terminal and run the following:
 
 ```
@@ -478,6 +631,8 @@ You should get an output similar to:
 Docker version y.y.y, build yyyyy
 ```
 
+We will configure Docker in a later section.
+
 (attributions)=
 ## Attributions
 
@@ -486,5 +641,5 @@ Docker version y.y.y, build yyyyy
 * [Software Carpentry](https://software-carpentry.org/)
 
 ```{important}
-These instructions have been adapted and remixed from the original version provided by the UBC-Vancouver [MDS Install stack](https://ubc-mds.github.io/resources_pages/installation_instructions/) under a CC-BY-SA 4.0 license. They were originally written by [Anmol Jawandha](https://github.com/Anmol6) but have since been updated by Firas Moosvi, Joel Ostblom, Tomas Beuzen, Rodolfo Lourenzutti, & Tiffany Timbers, and others.
+These instructions have been heavily adapted and remixed from the original version provided by the UBC-Vancouver [MDS Install stack](https://ubc-mds.github.io/resources_pages/installation_instructions/) under a CC-BY-SA 4.0 license. They were originally written by [Anmol Jawandha](https://github.com/Anmol6) but have since been updated by Firas Moosvi, Joel Ostblom, Tomas Beuzen, Rodolfo Lourenzutti, & Tiffany Timbers, and others.
 ```

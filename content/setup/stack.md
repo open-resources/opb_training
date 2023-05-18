@@ -2,14 +2,14 @@
 Open Problem Bank Tech Stack
 =======================
 
-To do data analyses, we will use several tools and software packages in this course.
+To do data analyses, we will use several tools and software packages in this project.
 These tools are not usually included on your computer, and if they are, some configuration is necessary.
 This page links out to a guide (depending on your operating system) to install the "Tech Stack" for this project.
 A "Tech Stack" is the complete set of tools and technologies needed to accomplish a particular task, in this case, Data Analytics.
 
-As you go through the install guides, remember that perhaps the two most important things you will learn in this course is how to troubleshoot things and achieve familiarity and proficiency with your computer.
+As you go through the install guides, remember that perhaps the two most important things you will learn in this project is how to troubleshoot things and achieve familiarity and proficiency with your computer.
 Be patient, read things carefully, do not be afraid to try things, it's unlikely you will do anything to irreversibly break your computer! 
-Almost everything you do (you're on your own if you decide to take a hammer to your laptop!) can be undone, don't be afraid to ask your peers, TAs, and the instructor on {{ FORUM_LINK }}.
+Almost everything you do (you're on your own if you decide to take a hammer to your laptop!) can be undone, don't be afraid to ask your peers, TAs, and the instructor on Mattermost.
 
 This is an exciting time for you as you begin your Data Science journey!
 

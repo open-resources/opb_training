@@ -84,7 +84,7 @@ A guide to authoring questions using inclusive language.
 :::
 
 :::{grid-item-card}
-:link: common_issues
+:link: common_issues2
 :link-type: ref
 :class-header: sd-bg-primary sd-text-white
 

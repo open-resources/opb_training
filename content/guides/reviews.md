@@ -23,4 +23,4 @@ This process specifically applies to .md files which will be converted to the Pr
 
 ## Common Issues
 
-See the [common issues](common_issues) page for some things to look for when you're reviewing.
+See the [common issues](common_issues2) page for some things to look for when you're reviewing.

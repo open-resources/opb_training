@@ -6,16 +6,16 @@ Windows Software Stack
 	<base target="_blank">
 </head> -->
 
-These instructions will walk you through installing the required Data Science software stack for this project. 
-Before starting, ensure that your laptop meets the minimum requirements listed [here](https://docs.docker.com/desktop/install/windows-install/).
-
-If your computer does not meet any of the requirements above, let me know first and we can discuss alternate possibilities so you can still participate.
-
 ```{tip}
 Before starting, I suggest updating your Windows operating system to the latest version your laptop can run:
 
 [See here](https://support.microsoft.com/en-us/windows/update-windows-3c5ae7fc-9fb6-9af1-1984-b5e0412c556a) on how to update your Windows 11 machine to the latest version.
 ```
+
+These instructions will walk you through installing the required Data Science software stack for this project. 
+Before starting, ensure that your laptop meets the minimum requirements listed [here](https://docs.docker.com/desktop/install/windows-install/).
+
+If your computer does not meet any of the requirements above, let me know first and we can discuss alternate possibilities so you can still participate.
 
 ## Installation notes
 
@@ -28,23 +28,35 @@ Once you have completed these installation instructions, make sure to follow the
 
 ## Table of Contents
 
-- [Mattermost](#mattermost)
-- [Web browser](#web-browser)
-- [Microsoft Office](#microsoft-office)
-- [Visual Studio Code](#visual-studio-code)
-- [Terminal](#terminal-gitbash)
-- [Python, Conda, and JupyterLab](#python)
-- [Configuring VS Code extensions](#vscode-extensions)
-- [Git and GitHub](#git-and-github)
-- [Tree](#tree)
-- [Test JupyterLab](#test-jupyterlab)
+- [Zoom](zoom_w)
+- [Mattermost](mattermost_w)
+- [GitHub.com account](github.com_w)
+- [Visual Studio Code](visual_studio_code_w)
+- [Terminal](terminal_w)
+- [Python](python_w)
+- [R](R_w)
+- [Git and GitHub](git_github_w)
+- [Tree](tree_w)
+- [Test JupyterLab](test_jupyterlab_w)
+- [Docker](docker_w)
 
-## Web browser
+(zoom_w)=
+## Zoom
 
-You are welcome to use most modern browsers that have a WebKit or Gecko backend.
-[Safari](https://www.apple.com/ca/safari/), [Firefox](https://www.mozilla.org/en-CA/firefox/new/?redirect_source=firefox-com), [Vivaldi](https://vivaldi.com), [Brave](https://brave.com), [Edge](https://www.microsoft.com/en-us/edge) are all recommended.
-Google Chrome is not recommended because of the [well-documented privacy and tracking issues with Google](https://www.forbes.com/sites/zakdoffman/2021/03/20/stop-using-google-chrome-on-apple-iphone-12-pro-max-ipad-and-macbook-pro/).
+We will be using Zoom for this project for our meetings.
+It is *very* important that you have the most recent version of Zoom installed, as we will be using many of the features that are only available in more recent versions.
 
+The latest version of Zoom as of May 2023 is: `5.14.6 (17822)`. 
+You can ensure you have the latest version of Zoom by clicking "Check for Updates" as shown in the screenshot below (on a Windows machine, your screenshot will look slightly different).
+
+<img src="setup_images/zoom.png" alt = "Zoom 'Check for Updates' showing the latest version of Zoom is installed."/>
+
+```{important}
+Please note that if you have been relying on the "web version" of Zoom that works only in a browser, this will not work for this project!
+Please make sure to download the Zoom desktop client for your operating system to fully participate in the course.
+```
+
+(mattermost_w)=
 ## Mattermost
 
 Once students have joined the team, for team communication and coordinating, we will be using Mattermost.
@@ -58,21 +70,7 @@ You will need the following server information:
 - Server URL: https://moosvilab.ok.ubc.ca
 - Server Display Name: `MoosviLab`
 
-## Zoom
-
-We will be using Zoom in this course in this project.
-It is *very* important that you have the most recent version of Zoom installed, as we will be using many of the features that are only available in more recent versions.
-
-The latest version of Zoom as of May 2023 is: `5.14.6 (17822)`. 
-You can ensure you have the latest version of Zoom by clicking "Check for Updates" as shown in the screenshot below (on a Windows machine, your screenshot will look slightly different).
-
-<img src="setup_images/zoom.png" alt = "Zoom 'Check for Updates' showing the latest version of Zoom is installed."/>
-
-```{important}
-Please note that if you have been relying on the "web version" of Zoom that works only in a browser, this will not work for this project!
-Please make sure to download the Zoom desktop client for your operating system to fully participate in the course.
-```
-
+(github.com_w)=
 ## GitHub.com account
 
 Sign up for a free account at [GitHub.com](https://github.com/) if you don't have one already.
@@ -80,19 +78,56 @@ Your GitHub username is important, here's how to find your username:
 
 <img src="setup_images/github_account.png" alt = "Pointing to the top right once you log into GitHub.com to identify your username."/>
 
+(visual_studio_code_w)=
+## Visual Studio Code
+
+The open-source text editor Visual Studio Code (VS Code) is both a powerful text editor and a full-blown Python IDE, which we will use for more complex analysis.
+You can download and install the Windows version of VS Code from the VS code website [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
+Once the download is finished, double click it to open and follow the installation instructions.
+Make sure you are able to open VS Code by clicking on the application.
+
+### VSCode extensions
+
+The real magic of VS Code is in the extensions that let you add languages, debuggers, and tools to your installation to support your specific workflow.
+Now that we have installed all our other Data Science tools, we can install the VS Code extensions that work really well with them.
+From within VS Code you can open up the [Extension Marketplace (read more here)](https://code.visualstudio.com/docs/editor/extension-gallery) to browse and install extensions by clicking on the Extensions icon in the Activity Bar indicated in the figure below.
+
+<img src="setup_images/vscode.png" alt = "Pointing to the left sidebar to where extensions can be installed."/>
+
+To install an extension, you simply search for it in the search bar, click the extension you want, and then click "Install".
+There are extensions available to make almost any workflow or task you are interested in more efficient!
+Here we are interested in setting up VS Code as a Python IDE.
+To do this, search for and install the following extensions:
+
+- `Python` (by Microsoft)
+- `Path Intellisense` (by Christian Kohler)
+- `EditorConfig for VS Code` (by editorconfig.org)
+- `Code Spell Checker` (by Street Side Software)
+- `indent-rainbow` (by oderwar)
+- `isort` (by Microsoft)
+
+<img src="setup_images/vscode_python.png" alt = "Pointing to the VS Code for Python extension by Microsoft in the list of extensions. Click 'Install'"/>
+
+[This video tutorial](https://www.youtube.com/watch?v=06I63_p-2A4) is an excellent introduction to using VS Code in Python.
+
+(terminal_w)=
 ## Terminal (GitBash)
+
+```{attention}
+If you have Windows Terminal already installed on your system, you can also use that, but it's not fully supported because I don't have a windows machine to test it with!
+A PR is welcome to add instructions on installing Git and Python on Windows Terminal!
+```
 
 Unfortunately, one of the major problems with using the Windows operating system is that the "Command Prompt" that comes with the operating system is severely deficient. 
 No worries though, luckily most of the tools we use in this course are open source, so the community has worked hard to shore up deficiencies in the Microsoft ecosystem (until Windows subsystem for Linux is a more mature product).
 
-The replacement for the Command Prompt we will use in this course is called "GitBash".
-The latest version of GitBash for Windows is: `2.37.3`.
+The replacement for the Command Prompt we will use in this project is called "GitBash".
+The latest version of GitBash for Windows is: `2.40.1`.
 
 ```{attention}
 "GitBash" is relatively old software, but it is very reliable and works very well. 
 If you are feeling brave and want to setup `zsh` (the next generation Terminal, with many improvements) on Windows, you can [try these instructions here](https://dev.to/zinox9/installing-zsh-on-windows-37em).
 Note that these instructions are experimental and support from the teaching team is limited. But if you can get it to work or run into any issues, let me know.
-I hope to adopt zsh on windows fully next time I teach this course.
 ```
 
 Briefly, we will be using the Bash shell to interact with our computers via a command line interface, and Git to keep a version history of our files and upload to/download from to GitHub.
@@ -148,14 +183,7 @@ git --version
 git version 2.32.0.windows.1
 ```
 
-## Visual Studio Code
-
-The open-source text editor Visual Studio Code (VS Code) is both a powerful text editor and a full-blown Python IDE, which we will use for more complex analysis.
-You can download and install the Windows version of VS Code from the VS code website [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
-Once the download is finished, double click it to open and follow the installation instructions.
-Make sure you are able to open VS Code by clicking on the application.
-
-
+(python_w)=
 ## Python
 
 We will be using Python for a large part of the course, and `conda` will be our Python package manager.
@@ -271,11 +299,11 @@ Let's install the key packages needed (you will note that we're also specifying 
 You should copy and paste each line below in your Terminal to install the following packages:
 
 ```
-conda install -c conda-forge "jupyterlab=3.*"
-conda install -c conda-forge "numpy=1.*"
-conda install -c conda-forge "pandas=1.*"
-conda install -c conda-forge "black=19.*"
-conda install -c conda-forge "nbconvert=6.*"
+conda install -c conda-forge "jupyterlab"
+conda install -c conda-forge "numpy"
+conda install -c conda-forge "pandas"
+conda install -c conda-forge "black"
+conda install -c conda-forge "nbconvert"
 conda install -c conda-forge "seaborn"
 conda install -c conda-forge "pre-commit"
 ```
@@ -284,28 +312,167 @@ conda install -c conda-forge "pre-commit"
 We are specifying that we should use the "conda-forge" source because it typically has more recent and updated package versions.
 This may take a while to complete.
 
+### Packages not yet available on `conda`
 
-## VSCode extensions
+There are some packages that we need for this project that are not available on the `conda` package manager, so let's use `pip` to install them:
 
-The real magic of VS Code is in the extensions that let you add languages, debuggers, and tools to your installation to support your specific workflow.
-Now that we have installed all our other Data Science tools, we can install the VS Code extensions that work really well with them.
-From within VS Code you can open up the [Extension Marketplace (read more here)](https://code.visualstudio.com/docs/editor/extension-gallery) to browse and install extensions by clicking on the Extensions icon in the Activity Bar indicated in the figure below.
+```
+pip install problem_bank_scripts --upgrade
+pip install problem_bank_helpers --upgrade
+```
 
-<img src="setup_images/vscode.png" alt = "Pointing to the left sidebar to where extensions can be installed."/>
+(R_w)=
+## R, IRkernel, Rtools, and RStudio
 
-To install an extension, you simply search for it in the search bar, click the extension you want, and then click "Install".
-There are extensions available to make almost any workflow or task you are interested in more efficient!
-Here we are interested in setting up VS Code as a Python IDE.
-To do this, search for and install the following extensions:
+R is another programming language that we will be using a lot in this project, particularly for the Data Science and Statistics problem banks.
+We will use R both in Jupyter notebooks and in RStudio.
 
-- `Python`
-- `Python Extension Pack` (for notebooks, debugging, linting, formatting, etc.)
-- `markdownlint` (markdown linting and style checking extension)
+### R
 
-<img src="setup_images/vscode_python.png" alt = "Pointing to the VS Code for Python extension by Microsoft in the list of extensions. Click 'Install'"/>
+Go to <https://cran.r-project.org/bin/windows/base/> and download the latest version of R for Windows (4.0.2 at the time of writing). Open the file and follow the installer instructions accepting the default configuration.
 
-[This video tutorial](https://www.youtube.com/watch?v=06I63_p-2A4) is an excellent introduction to using VS Code in Python.
+After the installation is complete, we will add the R executables to the PATH variable in terminal so that you can use it without typing the full path to R each time. Open a terminal and type:
 
+```
+code ~/.bash_profile
+```
+
+Append the following line to the file
+
+```
+# Add R and Rscript to PATH
+export PATH="/c/Program Files/R/R-4.0.2/bin/x64":$PATH
+```
+
+Then save the file and exit VS Code.
+Now you can open terminal and type
+
+```
+R --version
+```
+
+which should return something like:
+
+```
+R version 4.2.3 (2023-03-15) -- "Taking Off Again"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under the terms of the
+GNU General Public License versions 2 or 3.
+For more information about these matters see
+https://www.gnu.org/licenses/.
+```
+
+> Note: Although it is possible to install R through Anaconda, we highly recommend not doing so. In case you have already installed R using Anaconda you can remove it by executing `conda uninstall r-base`.
+
+### RStudio
+
+Download the Windows version of RStudio from <https://www.rstudio.com/products/rstudio/download/preview>. Open the file and follow the installer instructions.
+
+To see if you were successful, try opening RStudio by clicking on its icon. It should open and looks something like this picture below:
+
+<img src="setup_images/RStudio.png" alt = ""/>
+
+Next, we will make sure that Rstudio uses the same directories as R from terminal for its configuration.
+To do this, we will need to set an environmental variable in Windows.
+First, open the start menu, type "env" and select the match that reads "Edit the system environment variables".
+Click the button at the bottom that reads "Environmental Variables...":
+
+<img src="setup_images/sys-props-env-vars.png" alt = ""/>
+
+Under "User variable" click the "New..." button:
+
+<img src="setup_images/env-vars-new-user-var.png" alt = ""/>
+
+And type in `R_USER` as the "Variable name" and `C:\Users\username` as the "Variable value", replacing `username` with your actual user name (if you don't know your user name, look at the top of the screenshot above where it says "User variables for your_username"):
+
+<img src="setup_images/new-user-var-values.png" alt = ""/>
+
+Click "OK" on all of the three windows we opened above and you're done! If you open RStudio and R from terminal and type
+
+```
+.libPaths()
+```
+
+both should return the same values, e.g.
+
+```
+"C:/Users/joelo/R/win-library/4.0"   "C:/Program Files/R/R-4.0.2/library"
+```
+
+### Rtools
+
+Windows users will also need to install Rtools, which will allow you to use external libraries. Go to <http://cran.r-project.org/bin/windows/Rtools/> and download the latest version (e.g., Rtools40.exe). After the download has finished, run the installer with the default configuration. Do *not* follow the Rtools' website instructions for "Putting Rtools on the PATH". RStudio will put Rtools on the PATH automatically when it is needed.
+
+To test if you're installation was successful, open RStudio and type the following into the Console:
+
+```
+install.packages("jsonlite", type = "source")
+```
+
+If the `jsonlite` package installs without errors, Rtools is setup correctly.
+
+### Essential R packages
+
+Next, install the key R packages needed for the start of MDS program,
+by opening up RStudio and
+typing the following into the R console inside RStudio:
+
+```
+install.packages(c('tidyverse', 'blogdown', 'xaringan', 'renv', 'devtools', 'usethis'))
+```
+
+If you get a prompt asking if you want to install packages that need compilation from sources, click "Yes".
+
+> Note: we will use many more packages than those listed above across the MDS program, however we will manage these using the `renv` package manager (which you will learn about in DSCI 521: Platforms for Data Science).
+
+### IRkernel
+
+The `IRkernel` package is needed to make R work in Jupyter notebooks. To enable this kernel in the notebooks, open R *from a terminal* and run the setup via the following two commands:
+
+```
+install.packages('IRkernel')
+IRkernel::installspec()
+```
+
+When asked to select a mirror, pick one at a location close to where you live for faster downloads.
+
+> Note that you cannot use RStudio for this step because it will not be able to find the jupyter installation. R from terminal will since the correct PATH for jupyter is set when the terminal is launched.
+
+To see if you were successful, try running JupyterLab and check if you have a working R kernel. To launch the JupyterLab type the following in the terminal:
+
+```
+jupyter lab
+```
+
+A browser should have launched and you should see a page that looks like the screenshot below. Now click on "R" notebook (circled in red on the screenshot below) to launch an JupyterLab with an R kernel.
+
+<img src="setup_images/jupyter_lab_r_kernel.png" alt = ""/>
+
+Sometimes a kernel loads, but doesn't work as expected. To test whether your installation was done correctly now type `library(tidyverse)` in the code cell and click on the run button to run the cell. If your R kernel works you should see something like the image below:
+
+<img src="setup_images/jupyter_lab_r_kernel2.png" alt = ""/>
+
+To improve the experience of using R in JupyterLab,
+we will add an extension that allows us to setup keyboard shortcuts for inserting text
+(thanks to former MDS student Ryan Homer for developing this extension!).
+By default,
+it creates shortcuts for inserting two of the most common R operators: `<-` and `%>%`.
+Run the following from terminal to install the extension:
+
+```
+jupyter labextension install @techrah/text-shortcuts
+jupyter lab build
+```
+
+To check that the extension is working,
+open JupyterLab,
+launch an R notebook,
+and try inserting the operators by pressing `Alt` + `-` or `Shift` + `Ctrl` + `m`, respectively.
+
+(git_github_w)=
 ## Git and GitHub
 
 We will use the publicly available [GitHub.com](https://github.com/).
@@ -335,26 +502,19 @@ To ensure that you haven't made a typo in any of the above, you can view your gl
 
 This is a bit tricky, so please make sure you follow these directions carefully.
 
-1. Create a Personal Access Token on GitHub.com by clicking this link: https://github.com/settings/tokens/new; make sure to COPY the token that they give you, it is basically a special password that you can use in the Terminal. Detailed steps are:
+1. Create a **classic** Personal Access Token on GitHub.com by clicking this link: https://github.com/settings/tokens/new.
 
-- Log in to GitHub.com, 
-- Click your picture in the top right, 
-- Click Settings, 
-- Click Developer Settings
-- Click "Personal access tokens", set the appropriate permissions at the "repo" level (see image below):
+2. Add a short description (OPB project is probably fine).
 
-```{figure} setup_images/repo.png
----
-name: PAT_windows
----
-Personal Access Token settings
+3. Check the "repo" box and the "workflow" and the "admin" boxes.
+
+4. Click "Generate Token" and make sure to COPY the token that they give you and save it somewhere secure (like a password manager), it is basically a special password that you can use in the Terminal. Save this token somewhere on your computer, you will need it when you clone a **private** repository to your computer.
+
+```{tip}
+Don't share your token with anyone and protect it like it's your password! 
+You will not be able to come back to this page to get your token.
+If you forget it, or lose it, you can just delete the token and create another one.
 ```
-
-<img src="setup_images/GitHubcreatePAT.gif">
-
-- Click "Generate new token"
-- Save this token somewhere on your computer, you will need it when you clone a **private** repository to your computer.
-- Don't share your token with anyone and protect it like it's your password! You will not be able to come back to this page to get your token. If you forget it, or lose it, you can just delete the token and create another one.
 
 ### Clone your first repository on your computer!
 
@@ -392,8 +552,8 @@ code --version
 ```
 
 ```
-1.71
-e4503b30fc78200f846c62cf8091b76ff5547662
+1.78.2
+b3e4e68a0bc097f0ae7907b217c1119af9e03435
 x64
 ```
 
@@ -419,6 +579,7 @@ Then save the file and exit VS Code.
 
 > Most terminal programs will read the `EDITOR` environmental variable when determining which editor to use, but some read `VISUAL`, so we're setting both to the same value.
 
+(tree_w)=
 ## Tree
 
 From the [Tree for Windows](http://gnuwin32.sourceforge.net/packages/tree.htm) page, "Tree is a recursive directory listing program that produces a depth indented listing of files."
@@ -437,6 +598,7 @@ In brief, the steps are:
 
 4. Restart GitBash and type in `tree`.
 
+(test_jupyterlab_w)=
 ## Test JupyterLab 
 
 To test that your JupyterLab installation is functional, open a new Terminal window.
@@ -450,6 +612,29 @@ You should see something like this in your browser:
 ![](setup_images/jupyter_lab.png)
 
 You're all done!
+
+(docker_w)=
+## Docker
+
+You will also need to install Docker for this project.
+It's free but you will need at least 25 GB of free space on your machine.
+
+- On Windows [download it here](https://docs.docker.com/desktop/install/windows-install/)
+    - There are some specific Windows version requirements, be sure to read the requirements carefully and ensure you meet either the WSL 2 backend or the Hyper-V backend
+
+To confirm Docker is working, open a Terminal and run the following:
+
+```
+docker --version
+```
+
+You should get an output similar to:
+
+```
+Docker version y.y.y, build yyyyy
+```
+
+We will configure Docker in a later section.
 
 ## Attributions
 
