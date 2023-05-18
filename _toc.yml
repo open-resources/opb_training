@@ -1,10 +1,10 @@
 format: jb-book
 root: content/home
 parts:
-- caption: About this site
-  chapters:
-  - file: content/about
-  - file: content/faq
+# - caption: About this site
+#   chapters:
+#   - file: content/about
+#   - file: content/faq
 
 - caption: Setup your machines
   chapters:

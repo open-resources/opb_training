@@ -18,8 +18,9 @@ This is an exciting time for you as you begin your Data Science journey!
 Below are links to the software installation guide used for this project for the three operating systems that are currently supported.
 
 - [macOS](page_install_ds_stack_macOS)
-- [Ubuntu](page_install_ds_stack_ubuntu)
 - [Windows](page_install_ds_stack_windows)
+- Ubuntu (follow the macOS guide for now and adjust accordingly)
+<!-- - [Ubuntu](page_install_ds_stack_ubuntu) -->
 
 ## Attribution
 
