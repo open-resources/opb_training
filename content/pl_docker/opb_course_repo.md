@@ -16,10 +16,10 @@ To get your own PrairieLearn course for local development, follow these steps:
 ## Step 3: Clone the IND 100 repository locally
 
 ```{warning}
-For best results, you should clone your `IND 100` course repository in the same directory your cloned `instructor_physics_bank`.
+For best results, you should clone your `IND 100` course repository in the same directory your cloned `instructor_subject_bank`.
 ```
 
-Open a Terminal, navigate to the directory you want to clone the IND 100 course:
+Open a Terminal, navigate to the directory you want to clone the IND 100 course and then run:
 
 ```
 git clone git@github.com:open-resources/pl-opb-ind100.git

@@ -120,7 +120,7 @@ docker run -it --rm -p 3000:3000 -v local_path:/course prairielearn/prairielearn
 ```
 
 ````{tip}
-For staff working on the Open Problem Bank, your `local_path` should be the **absolute path** wherever you cloned the IND 100 (`pl-opb-ind100`) and the `instructor_physics_bank` repositories.
+For staff working on the Open Problem Bank, your `local_path` should be the **absolute path** wherever you cloned the IND 100 (`pl-opb-ind100`) and the `instructor_subject_bank` repositories.
 
 For example, the exact command for me is:
 
@@ -145,13 +145,13 @@ If you plan on running externally graded questions in local development, please 
 **NOTE**: On MacOS with "Apple Silicon" (ARM64) hardware, the use of R is not currently supported.
  -->
 
-## Step 9: Run the script to move a question from the `instructor_physics_bank` to IND 100
+## Step 9: Run the script to move a question from the `instructor_subject_bank` to IND 100
 
-Since we are writing questions for the OPB using MyST Markdown, there is an extra processing step to convert the `.md` file to the PrairieLearn format (`.html`, `.json`, and `.py` files).
+Since we are writing questions for the OPB using MyST Markdown (more details about this later), there is an extra processing step to convert the `.md` file to the PrairieLearn format (`.html`, `.json`, and `.py` files).
 This processing step is somewhat automated using GitHub Actions, but it's often helpful to do the processing locally since it takes much less time and is more efficient when troubleshooting.
 Here are the steps to run the processing step on an `.md` question to create `.html`, `.json`, and `.py` files, and then move them over to the IND 100 and see how the question looks.
 
-- Open a Terminal on your local machine, and change directory to where the `instructor_physics_bank` is cloned.
+- Open a Terminal on your local machine, and change directory to where the `instructor_subject_bank` is cloned.
 - `cd` into the `scripts` directory.
 - Run the script on a particular question: 
 
