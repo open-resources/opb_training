@@ -94,7 +94,6 @@ Another way to stop the Docker container is to open Docker Desktop and press the
 ```{tip}
 This step is sometimes a bit finicky - your Terminal may stop responding when trying to stop the Container using `Ctrl+C`.
 If that happens, don't close the Terminal, and use the Docker Desktop to stop the container.
-
 ```
 
 ## Step 7: Fork the IND 100 sample PrairieLearn course

@@ -27,7 +27,7 @@ git clone git@github.com:open-resources/pl-opb-ind100.git
 
 <img src="pl_images/ind100_clone.png">
 
-Once you've got the repository cloned locally, you can [use Docker to continue course development](docker_course_dev).
+Once you've got the repository cloned locally, you can [use Docker to continue course development](prairielearn_docker).
 
 ## Updating the IND 100 repository
 

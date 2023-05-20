@@ -20,7 +20,7 @@ Start by installing the tech stack for this project.
 :::
 
 :::{grid-item-card}
-:link: prairielearn
+:link: prairielearn_intro
 :link-type: ref
 :class-header: sd-bg-dark sd-text-white
 
@@ -44,19 +44,22 @@ Setting up to develop PrairieLearn questions using Docker.
 :::
 
 :::{grid-item-card}
-:link: authoring_questions
+:link: prairielearn_intro
 :link-type: ref
 :class-header: sd-bg-warning
 
-4-OPB Question Development
+4-OPB Question Development (Coming Soon)
 ^^^
 
 Learn how to create questions for the OPB using Myst Markdown.
 :::
 ::::
 
-## Additional Shortcuts
+## Additional Shortcuts (Coming Soon)
 
+This section will be populated shortly...
+
+<!-- 
 ::::{grid} 1 1 2 3
 :class-container: text-center
 :gutter: 3
@@ -127,8 +130,17 @@ Guide: Using LaTeX 🧙‍♂️
 A guide to using LaTeX for equations, formulas, and variables.
 :::
 ::::
+-->
 
 ## Attributions
 
+Image Attributions:
+
 - [Logo image by Yan Krukov](https://www.pexels.com/photo/a-students-studying-together-8199148/)
 - [Header Image by Yan Krukov](https://www.pexels.com/photo/a-class-having-a-recitation-8199166/)
+
+People Attributions:
+
+- Jake Bobowski
+- Cinda Heeren
+- MANY other people
