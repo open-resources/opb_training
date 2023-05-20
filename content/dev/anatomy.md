@@ -60,7 +60,7 @@ After the YAML header is complete, the next section contains the question text, 
 This section will include your question in sentences for the question that you are authoring.
 You should keep the following in mind while filling this section in:
 
-- Keep each sentence on a separate line.
+- Keep each sentence on a separate line. This is called [semantic line breaks](https://sembr.org)
 - Use markdown syntax for any variables you use from the Python code section. Eg: `{{ params.vars.varName }}`
 - Use latex syntax for any units or symbols that you might use.
 
