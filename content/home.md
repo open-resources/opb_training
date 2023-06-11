@@ -44,14 +44,25 @@ Setting up to develop PrairieLearn questions using Docker.
 :::
 
 :::{grid-item-card}
-:link: prairielearn_intro
+:link: authoring
 :link-type: ref
 :class-header: sd-bg-warning
 
-4-OPB Question Development (Coming Soon)
+4-OPB Question Development
 ^^^
 
 Learn how to create questions for the OPB using Myst Markdown.
+:::
+
+:::{grid-item-card}
+:link: tips
+:link-type: ref
+:class-header: sd-bg-warning
+
+5-Tips
+^^^
+
+Tips to authoring questions in the OPB
 :::
 ::::
 
