@@ -89,15 +89,6 @@ This is not a required section, and is hidden from the students.
 This is for any comments related to the question that you might want to include.
 This is not a required section, and is hidden from the students.
 
+## Tests for Autograded questions
 
-## Link to all resources for authoring questions
-
-- [Masterlist of Topics, Subtopics and Learning Outcomes](https://github.com/open-resources/learning_outcomes/blob/main/Masterlist.csv)
-
-- [Templates for different type of questions](https://github.com/open-resources/instructor_physics_bank/tree/main/templates)
-
-- [Guide to using Latex in questions](https://firas.moosvi.com/oer/physicsbank/docs/latex.html)
-
-- [Rounding and Significant Figures in problems](https://firas.moosvi.com/oer/physics_bank/docs/rounding.html)
-
-- [More tips for authoring questions](https://firas.moosvi.com/oer/physics_bank/docs/tips.html)
+Coming soon...

@@ -1,3 +1,4 @@
+(tips)=
 # Tips for authoring questions
 
 Below is a list of suggestions and recommendations when authoring questions.

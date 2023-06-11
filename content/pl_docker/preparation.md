@@ -48,4 +48,10 @@ Now that you've answered all the prep questions, it's time to set up your workin
     pre-commit install
     ```
 
-Now you're ready to continue configuring and installing Docker.!
+Now you're ready to continue configuring and installing Docker!
+
+```{tip}
+Often we will want to hide certain files from the VS Code.
+For example, the `.ipynb_checkpoints` directory.
+To do this, follow the directions [here](https://www.w3schools.io/editor/vscode-hide-files-folder/).
+```
