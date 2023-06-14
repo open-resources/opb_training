@@ -158,7 +158,7 @@ Here are the steps to run the processing step on an `.md` question to create `.h
 - Run the script on a particular question: 
 
 ```
-python checkq.py ../source/001.Math/Algebra/Smudge/Smudge.md ../../pl-opb-ind100/questions/FM
+python checkq.py ../source/001.Math/Algebra/Smudge/Smudge.md --output_root=../../pl-opb-ind100/questions/FM
 ```
 
 - Open the local instance of PrairieLearn in your browser (http://localhost:3000).
