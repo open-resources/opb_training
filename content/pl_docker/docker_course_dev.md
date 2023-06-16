@@ -127,7 +127,7 @@ For staff working on the Open Problem Bank, your `local_path` should be the **ab
 For example, the exact command for me is:
 
 ```
-docker run -it --rm -p 3000:3000 -v ~/Sync/EL/code\ contributions/course_dev/pl-opb-ind100 :/course prairielearn/prairielearn 
+docker run -it --rm -p 3000:3000 -v ~/Sync/EL/OPB/course_dev/pl-opb-ind100:/course prairielearn/prairielearn 
 ```
 ````
 
