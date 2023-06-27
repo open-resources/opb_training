@@ -173,3 +173,51 @@ When developing locally on PrairieLearn, you **must** click "Load from Disk" eve
 
 That's it!
 You're ready to develop questions for the OPB!
+
+# Setting up local autograder container
+For development of questions that require an autograder, you will need to set up a local autograder container as well. 
+
+## Important! (Windows Only)
+If you are using Windows, the following commands will need to be executed in Windows Subsystem for Linux (WSL). You can do this two ways:
+1. Open a command prompt and type `wsl` to open a WSL terminal
+1. Look for the Windows Subsystem for Linux application in the Start Menu
+<img src="pl_images/wsl_icon_windows.png">
+
+## Step 1: Pull the PrairieLearn Autograder container
+
+Run the following command to pull the PrairieLearn Autograder image:
+
+```bash
+docker pull prairielearn/grader-python
+```
+*Note*: You can skip this step, PrairieLearn will automatically pull the image if it is not found locally. This will just mean that the first time you attempt an autograded question, it will take a few minutes to download the image. 
+
+## Step 2: Create a local directory for the autograder
+
+To run PrairieLearn locally with external grader and workspace support, create an empty directory to use to share job data between containers. This directory can live anywhere, but needs to be created first and referenced in the docker launch command. This directory only needs to be created once.
+```bash
+mkdir "$HOME/pl_ag_jobs"
+```
+
+## Step 3: Run the PrairieLearn Autograder container
+Now, run PrairieLearn as usual, but with additional options. For example, if your course directory is in $HOME/pl-tam212 and the jobs directory created above is in $HOME/pl_ag_jobs, and you are using Linux or Mac OS X, the new command is as follows:
+```bash
+docker run -it --rm -p 3000:3000 \
+    -v "$HOME/pl-tam212:/course" `# Replace the path with your course directory` \
+    -v "$HOME/pl_ag_jobs:/jobs" `# Map jobs directory into /jobs` \
+    -e HOST_JOBS_DIR="$HOME/pl_ag_jobs" \
+    -v /var/run/docker.sock:/var/run/docker.sock `# Mount docker into itself so container can spawn others` \
+    prairielearn/prairielearn
+```
+
+If you are on Windows, you can use the following command on the WSL 2 shell:
+```bash
+docker run -it --rm -p 3000:3000 \
+    -v "$HOME/pl-tam212:/course" `# Replace the path with your course directory` \
+    -v "$HOME/pl_ag_jobs:/jobs" `# Map jobs directory into /jobs` \
+    -e HOST_JOBS_DIR="$HOME/pl_ag_jobs" \
+    -v /var/run/docker.sock:/var/run/docker.sock `# Mount docker into itself so container can spawn others` \
+    --add-host=host.docker.internal:172.17.0.1 \
+    prairielearn/prairielearn
+```
+*NOTE*: When replacing the path with your course directory on Windows, make sure to use the WSL path (e.g. `/mnt/c/Users/username/pl-tam212`) and __not__ the Windows path (e.g. `C:\Users\username\pl-tam212`).
