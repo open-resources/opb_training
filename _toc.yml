@@ -49,6 +49,7 @@ parts:
   chapters:
   - file: content/instructors/randomization_framework
   - file: content/pl/intro_creating_assessment
+  - file: content/instructors/irene_intro
 
 # - caption: Course Feedback
 #   chapters:
