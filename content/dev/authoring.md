@@ -49,7 +49,7 @@ This is a detailed guide to author questions.
 
     > `git switch -c newbranchname` (the `-c` flag creates a new branch if it does not already exist)
 
-1. Choose a problem that you want to write in markdown, take note of the source, and any attribution you may need to make. Use the [Topics, Subtopics, and Learning Outcomes](https://github.com/open-resources/learning_outcomes/blob/main/Masterlist.csv) file to get the "Topic" and "Subtopic" - you will need to put the question in the correct directory.
+1. Choose a problem that you want to write in markdown, take note of the source, and any attribution you may need to make. Use the [Topics, Subtopics, and Learning Outcomes](https://github.com/open-resources/learning_outcomes/blob/main/outputs_csv/LO_physics.csv) file to get the "Topic" and "Subtopic" - you will need to put the question in the correct directory.
 
 1. Create a new directory with your question's name in the `source/YourTopic/QuestionTitle` or `source/YourTopic/YourSubtopic/QuestionTitle` directory to store your markdown file and any assets (usually images) associated with it.
 
