@@ -5,7 +5,7 @@ From experience, the best way to develop questions is to have access to a demo c
 
 To get your own PrairieLearn course for local development, follow these steps:
 
-## Step 1: Visit the [IND 100](https://github.com/open-resources/pl-opb-ind100) course repository I've created for you.
+## Step 1: Visit the [IND 100](https://github.com/open-resources/pl-opb-ind100) course repository.
 
 <img src="pl_images/ind100.png">
 
