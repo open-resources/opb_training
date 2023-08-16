@@ -48,7 +48,7 @@ parts:
   - file: content/guides/alt-text/alt-text
   - file: content/guides/alt-text/alt-text2
   - file: content/guides/common_issues
-  - file: content/guides/update_ind100 
+  - file: content/guides/update_ind100
 
 # - caption: Troubleshooting
 #   chapters:
