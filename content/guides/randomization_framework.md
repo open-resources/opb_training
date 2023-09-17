@@ -3,9 +3,9 @@
 Below is a framework I developed for thinking about question randomization and different levels.
 Feedback is welcome!
 
-<img src="instructors_images/randomization_framework.png">
+<img src="guides_images/randomization_framework.png">
 
-<img src="instructors_images/randomization_framework_pedagogy.png">
+<img src="guides_images/randomization_framework_pedagogy.png">
 
 
 ```{dropdown} Conceptualizing Question Randomization
